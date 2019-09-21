@@ -3,7 +3,7 @@ from webapp.models import GuestBook
 
 
 def book_view(request, *args, **kwargs):
-    articles = GuestBook.objects.order_by('-date_of_creation')
+    articles = GuestBook.objects.filter(status='active').order_by('-date_of_creation')
     context = {
          'articles': articles
      }
