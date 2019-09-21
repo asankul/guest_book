@@ -47,3 +47,12 @@ def edit_guest(request, pk):
             return redirect('index')
         else:
             return render(request, 'guest_edit.html', context={'form': form, 'article': guest_book})
+
+
+def delete_guest(request, pk):
+    guest_book = get_object_or_404(GuestBook, pk=pk)
+    if request.method == 'GET':
+        return render(request, 'guest_delete.html', context={'guest_book': guest_book})
+    elif request.method == 'POST':
+        guest_book.delete()
+        return redirect('index')

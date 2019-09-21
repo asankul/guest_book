@@ -12,7 +12,7 @@
             <h5 class="card-title" style="display: inline;">{{ guest.name }} ({{ guest.email }})</h5>
             <div class="float-right">
                 <a href="{% url 'edit_guest' guest.pk %}" class="card-link"><i class="fas fa-edit"></i></a>
-                <a href="#" class="card-link"><i class="far fa-minus-square"></i></a>
+                <a href="{% url 'delete_guest' guest.pk %}" class="card-link"><i class="far fa-minus-square"></i></a>
             </div>
             <p class="card-text">{{ guest.text }}</p>
         </div>
