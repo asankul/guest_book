@@ -2,21 +2,33 @@
 
 {% block menu %}
     <a class="navbar-brand" href="{% url 'add_guest' %}">Добавить</a>
+    <form class="form-inline" action="{% url 'search' %}">
+        {% include 'partial/search.html' %}
+    </form>
 {% endblock %}
 
 {% block content %}
-<h1 class="pt-5 pb-2 text-center">Гостевая книга</h1>
-{% for guest in guest_book %}
-    <div class="card">
-        <div class="card-body">
-            <h5 class="card-title" style="display: inline;">{{ guest.name }} ({{ guest.email }})</h5>
-            <div class="float-right">
-                <a href="{% url 'edit_guest' guest.pk %}" class="card-link"><i class="fas fa-edit"></i></a>
-                <a href="{% url 'delete_guest' guest.pk %}" class="card-link"><i class="far fa-minus-square"></i></a>
+    <h1 class="pt-5 pb-2 text-center">Гостевая книга</h1>
+    {% if guest_book %}
+        {% for guest in guest_book %}
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" style="display: inline;">{{ guest.name }} ({{ guest.email }})</h5>
+                    <div class="float-right">
+                        <a href="{% url 'edit_guest' guest.pk %}" class="card-link"><i class="fas fa-edit"></i></a>
+                        <a href="{% url 'delete_guest' guest.pk %}" class="card-link"><i class="far fa-minus-square"></i></a>
+                    </div>
+                    <p class="card-text">{{ guest.text }}</p>
+                </div>
             </div>
-            <p class="card-text">{{ guest.text }}</p>
+            <hr>
+        {% endfor %}
+    {% else %}
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title text-center">Нет Записей</h5>
+            </div>
         </div>
-    </div>
-    <hr>
-{% endfor %}
+        <hr>
+    {% endif %}
 {% endblock %}

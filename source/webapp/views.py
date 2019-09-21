@@ -1,12 +1,14 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from webapp.models import GuestBook
-from webapp.forms import GuestBookForm
+from webapp.forms import GuestBookForm, SearchForm
 
 
 def book_view(request, *args, **kwargs):
     guest_book = GuestBook.objects.filter(status='active').order_by('-date_of_creation')
+    form = SearchForm()
     context = {
-        'guest_book': guest_book
+        'guest_book': guest_book,
+        'form': form
     }
     return render(request, 'index.html', context)
 
@@ -56,3 +58,20 @@ def delete_guest(request, pk):
     elif request.method == 'POST':
         guest_book.delete()
         return redirect('index')
+
+
+def search_guest(request, *args, **kwargs):
+    search_query = request.GET.get('search')
+    guest_book = GuestBook.objects.filter(name__contains=search_query).filter(status='active').order_by('-date_of_creation')
+    form = SearchForm()
+    if guest_book:
+        context = {
+            'guest_book': guest_book,
+            'form': form
+        }
+        return render(request, 'index.html', context)
+    else:
+        context = {
+            'form': form
+        }
+        return render(request, 'index.html', context)
