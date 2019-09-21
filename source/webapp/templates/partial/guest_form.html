@@ -1,0 +1,24 @@
+{% csrf_token %}
+<div class="form-group">
+    <label for="{{ form.title.id_for_label }}">{{ form.name.label }}</label>
+    {% for error in form.name.errors %}
+        <p class="form-error">{{ error }}</p>
+    {% endfor %}
+    <p>{{ form.name }}</p>
+</div>
+<div class="form-group">
+    <label for="{{ form.email.id_for_label }}">{{ form.email.label }}</label>
+    {% for error in form.email.errors %}
+        <p class="form-error">{{ error }}</p>
+    {% endfor %}
+    <p>{{ form.email }}</p>
+</div>
+<div class="form-group">
+    <label for="{{ form.text.id_for_label }}">{{ form.text.label }}</label>
+    {% for error in form.text.errors %}
+        <p class="form-error">{{ error }}</p>
+    {% endfor %}
+    <p>{{ form.text }}</p>
+</div>
+<button type="submit" class="btn btn-primary">{{ button_text }}</button>
+<p class="pt-5"><a href="{% url 'index' %}" >На главную</a></p>
