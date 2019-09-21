@@ -1,0 +1,68 @@
+[
+{
+  "model": "webapp.guestbook",
+  "pk": 6,
+  "fields": {
+    "name": "Asankul Sadykov",
+    "email": "asankul@mail.ru",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "date_of_creation": "2019-09-21T07:34:20.376Z",
+    "date_of_edition": "2019-09-21T07:35:19.535Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 7,
+  "fields": {
+    "name": "Nurgazy Ordobaev",
+    "email": "nurgazy@mail.ru",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "date_of_creation": "2019-09-21T07:34:38.938Z",
+    "date_of_edition": "2019-09-21T07:34:38.938Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 8,
+  "fields": {
+    "name": "Azrat Kombarov",
+    "email": "azrat@mail.ru",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "date_of_creation": "2019-09-21T07:34:52.743Z",
+    "date_of_edition": "2019-09-21T07:34:52.743Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 9,
+  "fields": {
+    "name": "Ayperi Sadykova",
+    "email": "ayperi@mail.ru",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "date_of_creation": "2019-09-21T07:35:08.833Z",
+    "date_of_edition": "2019-09-21T07:35:08.833Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$yCVETA6I7wMT$QCho2R31M9h7cG5kJkZ4tdIh/pEVlp2s5uB8txrzWRk=",
+    "last_login": "2019-09-21T07:02:56.220Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-09-21T05:55:53.824Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
