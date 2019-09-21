@@ -3,8 +3,8 @@ from webapp.models import GuestBook
 
 
 def book_view(request, *args, **kwargs):
-    # articles = GuestBook.objects.all()
-    # context = {
-    #     'articles': articles
-    # }
-    return render(request, 'index.html')
+    articles = GuestBook.objects.order_by('-date_of_creation')
+    context = {
+         'articles': articles
+     }
+    return render(request, 'index.html', context)
